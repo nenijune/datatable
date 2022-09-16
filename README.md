@@ -1,2 +1,42 @@
-# datatable
+# latihan_frontendNeni
 this is my first repository in github
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="DataTables/datatables.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <table id="contoh" class="display">
+        <thead>
+            <tr>
+                <th width="5%">No</th>
+                <th width="50%">Nama</th>
+                <th width="15%">Kelas</th>
+                <th width="15%">Alamat</th>
+                <th width="15%">No HP</th>
+            </tr>
+        </thead>
+    </table>
+    <script src="DataTables/jQuery-3.6.0/jquery-3.6.0.min.js"></script>
+    <script src="DataTables/datatables.min.js"></script>
+    <script>
+        $(function(){
+            var data =[];
+            for (let i = 0; i < 100; i++) {
+                data.push([i]);
+                for (let j = 0; j < 100; j++) {
+                    data[i].push[j];                 
+                }
+            }
+            $("#contoh").DataTable({
+                responsive : true,
+                data : data
+            });
+        });
+    </script>
+</body>
+</html>
